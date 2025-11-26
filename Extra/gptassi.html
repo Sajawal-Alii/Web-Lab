@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Art Workshop Feedback</title>
+  <style>
+    /* 🎨 Page Background */
+    body {
+      background-color: rgb(209, 232, 255);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* 🗒️ Form Container */
+    form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    /* 🧱 Headings */
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    /* ✍️ Labels and Inputs */
+    label {
+      font-weight: bold;
+      color: #444;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    /* 🎞️ Video Styling */
+    video {
+      display: block;
+      margin: 0 auto 20px auto;
+      border-radius: 10px;
+    }
+
+    /* 🔘 Button */
+    button {
+      background-color: #0078ff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005fcc;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="submit_feedback.php" method="POST" enctype="multipart/form-data">
+    <h1>Digital Art Workshop Feedback</h1>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required tabindex="1">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required tabindex="2">
+
+    <label for="rating">Rate the Workshop:</label>
+    <select id="rating" name="rating" required tabindex="3">
+      <option value="" disabled selected>Select rating</option>
+      <option value="5">Excellent</option>
+      <option value="4">Very Good</option>
+      <option value="3">Good</option>
+      <option value="2">Fair</option>
+      <option value="1">Poor</option>
+    </select>
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..." required tabindex="4"></textarea>
+
+    <label for="artwork">Upload Your Artwork (image):</label>
+    <input type="file" id="artwork" name="artwork" accept="image/*" tabindex="5">
+
+    <fieldset tabindex="6">
+      <legend>Preferred Art Medium:</legend>
+      <input type="radio" id="canvas" name="medium" value="canvas">
+      <label for="canvas">Canvas</label><br>
+      <input type="radio" id="video" name="medium" value="video">
+      <label for="video">Video</label><br>
+      <input type="radio" id="audio" name="medium" value="audio">
+      <label for="audio">Audio</label>
+    </fieldset>
+
+    <h2>Workshop Recap Video</h2>
+    <video width="100%" controls>
+      <source src="recap.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+
+</body>
+</html>

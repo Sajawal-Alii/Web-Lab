@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sajawal Ali - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('img.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: rgba(116, 106, 179, 0.9);
+      text-align: center;
+      padding: 20px;
+      font-size: 28px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      background-color: rgba(35, 31, 59, 0.8);
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+      transform: scale(1.1);
+    }
+
+    #container {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin: 40px auto;
+      width: 90%;
+      gap: 30px;
+    }
+
+    aside {
+      background-color: rgba(35, 31, 59, 0.9);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    aside:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+    }
+
+    #left {
+      width: 300px;
+    }
+
+    #left b {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #ffcc00;
+    }
+
+    #left ul {
+      list-style-type: none;
+      line-height: 2;
+    }
+
+    #left a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    #left a:hover {
+      color: #ffcc00;
+    }
+
+    #center {
+      width: 280px;
+      text-align: center;
+    }
+
+    #center h5 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #ffcc00;
+    }
+
+    #center img {
+      height: 120px;
+      width: 120px;
+      border-radius: 50%;
+      border: 3px solid #ffcc00;
+      margin-top: 10px;
+    }
+
+    #center p {
+      margin-top: 10px;
+      font-size: 17px;
+    }
+
+    #right {
+      width: 300px;
+      text-align: center;
+    }
+
+    #right h4 {
+      font-size: 22px;
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input {
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #ffcc00;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      padding: 10px 10px;
+    }
+
+    button:hover {
+      background-color: #e6b800;
+    }
+
+    footer {
+      text-align: center;
+      background-color: rgba(35, 31, 59, 0.9);
+      padding: 15px;
+      font-size: 16px;
+      margin-top: auto;
+      box-shadow: 0 -4px 8px rgba(0,0,0,0.4);
+    }
+
+    footer span {
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Welcome to Sajawal's Portfolio</header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+    <a href="#">GitHub</a>
+  </nav>
+
+  <div id="container">
+
+    <aside id="left">
+      <b>My Projects</b>
+      <ul>
+        <li><a href="#">Gym Website Layout</a></li>
+        <li><a href="#">Pizza Delivery Layout</a></li>
+        <li><a href="#">Shopify Clone Layout</a></li>
+        <li><a href="#">Travel Agency “7 Continents”</a></li>
+      </ul>
+    </aside>
+
+    <aside id="center">
+      <h5>About Me</h5>
+      <img src="profile.jpeg" alt="My Image">
+      <p><b>Sajawal Ali</b></p>
+      <p>Front-End Developer at LGU</p>
+      <p>Passionate about web design and clean UI/UX</p>
+    </aside>
+
+    <aside id="right">
+      <h4>Contact Me</h4>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Your Message" required>
+        <button>Submit</button>
+      </form>
+    </aside>
+
+  </div>
+
+  <footer>
+    Designed by <span>LGU Developer (Sajawal Ali)</span>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Example</title>
+  <style>
+    #hoverBox {
+      width: 150px;
+      height: 100px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 100px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Event Examples</h2>
+
+<!-- click event -->
+<button id="clickBtn">Click Me</button>
+
+<!-- mouseover event -->
+<div id="hoverBox">Hover Over Me</div>
+
+<!-- keydown event -->
+<input type="text" id="keyInput" placeholder="Type something">
+
+<!-- submit event -->
+<form id="myForm">
+  <input type="text" id="name" placeholder="Enter name" required>
+  <button type="submit">Submit Form</button>
+</form>
+
+<!-- change event -->
+<input type="number" id="numInput" placeholder="Change me">
+
+<div id="output"></div>
+
+<script>
+  const output = document.getElementById('output');
+
+  // load event
+  window.addEventListener('load', () => {
+    output.innerText += 'Page has loaded!\n';
+  });
+
+  // click event
+  const clickBtn = document.getElementById('clickBtn');
+  clickBtn.addEventListener('click', () => {
+    output.innerText += 'Button was clicked!\n';
+  });
+
+  // mouseover event
+  const hoverBox = document.getElementById('hoverBox');
+  hoverBox.addEventListener('mouseover', () => {
+    output.innerText = 'Mouse is hovering over the box!\n';
+  });
+
+  // keydown event
+  const keyInput = document.getElementById('keyInput');
+  keyInput.addEventListener('keydown', (event) => {
+    output.innerText += `Key pressed: ${event.key}\n`;
+  });
+
+  // submit event
+  const form = document.getElementById('myForm');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault(); // prevent page refresh
+    output.innerText += `Form submitted! Name: ${document.getElementById('name').value}\n`;
+  });
+
+  // change event
+  const numInput = document.getElementById('numInput');
+  numInput.addEventListener('change', () => {
+    output.innerText += `Number changed: ${numInput.value}\n`;
+  });
+</script>
+
+</body>
+</html>

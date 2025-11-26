@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #007acc;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Class and ID Selectors */
+#main-title {
+    font-size: 2em;
+}
+
+.tagline {
+    font-style: italic;
+}
+
+/* Section Styling */
+.about, .projects {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Project Cards with Float */
+.project-card {
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+/* Clearfix */
+.projects::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="main-title">Sajawal Ali</h1>
+    <p class="tagline">Aspiring Web Developer | Student</p>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I am a passionate learner interested in front-end development and web design.</p>
+  </section>
+
+  <section class="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>A simple personal website built using HTML and CSS.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>To-Do App</h3>
+      <p>A basic task manager application using JavaScript.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sajawal Ali. All rights reserved.</p>
+  </footer>
+</body>
+</html>

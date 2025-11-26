@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4</title>
+    <link rel="stylesheet" href="/css/lab4.css">
+</head>
+<body>
+    <h1>Feedback Form</h1>
+
+    <div id="container">
+        <form action="#" method="post">
+            <!-- Name Input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name"><br><br>
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email"><br><br>
+
+            <!-- Gender Radio Buttons -->
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+            <!-- Interests Checkboxes -->
+            <label>Interests:</label>
+            <input type="checkbox" id="coding" name="interest" value="coding">
+            <label for="coding">Coding</label>
+            <input type="checkbox" id="design" name="interest" value="design">
+            <label for="design">Design</label><br><br>
+
+            <!-- Select Dropdown -->
+            <label for="experience">Experience Level:</label>
+            <select id="experience" name="experience">
+                <option value="beginner">Beginner</option> 
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select><br><br>
+
+            <!-- Textarea -->
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Your feedback..."></textarea><br><br>
+
+            <!-- Submit Button -->
+           
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <!-- Video -->
+    <video width="320" height="240" controls>
+        <source src="/Ad Library_2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Audio -->
+    <br><br>
+    <audio controls>
+        <source src="/Don't_Look_(4K_Video)_Karan_Aujla__Rupan_Bal__Jay_Trak__Latest_Punjabi_Songs_2019(128k).mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <!-- Canvas -->
+    <h2 style="text-align: center;">Canvas Demo</h2>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;" style="margin-left: 10px;"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Set fill color to red
+        ctx.fillStyle = "#FF0000";
+
+        // Draw a filled rectangle
+        ctx.fillRect(20, 20, 150, 50);
+    </script>
+
+
+</body>
+</html>

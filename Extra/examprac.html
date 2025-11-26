@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<label  id="bil" >Amount</label>
+<input type="number" id="bill" value="100">
+<label  id="tipp" >tipAmount</label>
+<input type="number" id="tip" value="10">
+<output id="total">total: 100$</output>
+
+<script>
+
+const billamount= document.getElementById('bill');
+const tippercent=document.getElementById('tip');
+const totalamount=document.getElementById('total');
+
+function calculate(){
+  const bill=parseFloat(billamount.value);
+  const tip=parseFloat(tippercent.value);
+
+  
+  const tipamount=(bill*tip)/100;
+  const total=bill+tipamount;
+
+  totalamount.textContent = `Total: ${total.toFixed(2)}$`;
+  
+
+}
+
+billamount.addEventListener("input",calculate);
+tippercent.addEventListener("input",calculate);
+calculate();
+
+</script>
+
+
+
+</body>
+</html>

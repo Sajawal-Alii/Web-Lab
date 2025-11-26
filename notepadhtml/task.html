@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sajawal Ali Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Poppins", sans-serif;
+      background-image: url(/Extra/img.jpg);
+      background-size: cover;
+      background-position: center;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      text-align: center;
+      font-size: 14px;
+      background-color: rgb(116 106 179);
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+    nav a { text-decoration: none; color: white; transition: color 0.3s; }
+    nav a:hover { color: #ffcc00; transform: scale(1.1); }
+    aside, #center { background-color: rgba(35,31,59,0.9); border-radius: 15px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: transform 0.3s; }
+    aside:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.6); }
+    #left b, #center h5, #right h4 { color: #ffcc00; margin-bottom: 10px; }
+    #left ul { list-style: none; line-height: 2; }
+    #left a { text-decoration: none; color: whitesmoke; transition: color 0.3s; }
+    #left a:hover { color: #ffcc00; }
+    #center img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #ffcc00; margin-bottom: 10px; }
+    form input { padding: 8px; border-radius: 6px; border: none; outline: none; margin-bottom: 10px; }
+    form button { background-color: #ffcc00; color: black; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s; }
+    form button:hover { background-color: #e6b800; }
+    footer { text-align: center; background-color: rgba(35,31,59,0.9); padding: 15px; font-size: 16px; margin-top: auto; box-shadow: 0 -4px 8px rgba(0,0,0,0.4); }
+    footer span { color: #ffcc00; }
+    #hero { background: rgba(35,31,59,0.9); text-align: center; padding: 100px 20px; }
+    #hero h1 { font-size: 40px; margin-bottom: 10px; }
+    #hero p { font-size: 18px; margin-bottom: 25px; }
+    #intro { background: rgba(255,255,255,0.9); color:black; text-align:center; padding:50px 20px; }
+    #intro h2 { color:black; }
+    #intro p { color:black; max-width:700px; margin: 10px auto; font-size:17px; }
+    .btn { background-color: white; color:black; padding:10px 20px; text-decoration:none; border-radius:20px; margin:5px; font-weight:bold; display:inline-block; }
+    .btn:hover { background-color:#e6e6e6; }
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+      #container { flex-direction: column; align-items: center; margin: 50px auto; }
+      aside, #center { width: 90% !important; margin-bottom: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to Sajawal Ali's Portfolio</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Project</a></li>
+          <li class="nav-item"><a class="nav-link" href="/notepadhtml/Contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Check out my projects and skills below.</p>
+      <a href="#" class="btn">Projects</a>
+      <a href="#" class="btn">Contact</a>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section id="intro">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am Sajawal Ali, a passionate web developer creating responsive websites using HTML, CSS, JS, and Bootstrap.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div id="container" class="container my-5 d-flex flex-wrap justify-content-around gap-4">
+    <!-- Left Column -->
+    <aside id="left" class="col-md-4 p-3 text-white">
+      <b>My Projects</b>
+      <ul>
+        <li><a href="#">Gym Website Layout</a></li>
+        <li><a href="#">Pizza Delivery Layout</a></li>
+        <li><a href="#">Shopify Clone Layout</a></li>
+        <li><a href="#">Travel Agency “7 Continents”</a></li>
+      </ul>
+    </aside>
+
+    <!-- Center Column -->
+    <aside id="center" class="col-md-4 p-3 text-center text-white">
+      <img src="/Extra/profile.jpeg" alt="Profile">
+      <h5>Sajawal Ali</h5>
+      <p>Front-End Developer at LGU</p>
+      <p>Passionate about web design and clean UI/UX</p>
+    </aside>
+
+    <!-- Right Column -->
+    <aside id="right" class="col-md-4 p-3 text-white text-center">
+      <h4>Contact Us</h4>
+      <form>
+        <input type="text" placeholder="Enter your Name" class="form-control" required>
+        <input type="email" placeholder="Enter your Email" class="form-control" required>
+        <input type="number" placeholder="Enter your Contact No" class="form-control" required>
+        <input type="text" placeholder="Your Message" class="form-control" required>
+        <button class="btn w-100 mt-2">Submit</button>
+      </form>
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Designed by <span>LGU Developer (Sajawal Ali)</span>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
